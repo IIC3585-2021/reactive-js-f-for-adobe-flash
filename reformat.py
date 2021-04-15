@@ -16,9 +16,14 @@ def change_import_to_require(line):
 def rewrite_file_with_imports(file_name):
 	list_file = list()
 
+	stop = True
+	list_imports = list()
+
 	with open(file_name) as file:
 		for line in file:
 			if 'import ' in line:
+				if '}' not in line:
+					stop = False
 				line = change_import_to_require(line)+'\n'
 			list_file.append(line)
 
