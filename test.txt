@@ -1,0 +1,13 @@
+    switchMap(() => elem.style.marginTop = '42px'),
+    switchMap(() => elem.style.marginBottom = '10px'),
+    delay(100),
+    switchMap(() => elem.style.marginTop = '37px'),
+    switchMap(() => elem.style.marginBottom = '15px'),
+    delay(100),
+    switchMap(() => elem.style.marginTop = '32px'),
+    switchMap(() => elem.style.marginBottom = '20px'),
+    delay(500),
+    switchMap(() => elem.style.marginTop = '42px'),
+    switchMap(() => elem.style.marginBottom = '10px'),
+    delay(100),
+    switchMap(() => elem.style.marginTop = '52px')
