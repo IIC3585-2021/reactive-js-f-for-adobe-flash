@@ -1,4 +1,4 @@
-import {gameHeight, gameWidth, player} from './constants.js';
+import {gameHeight, gameWidth, player1, player2} from './constants.js';
 
 const {
   interval,
@@ -18,7 +18,7 @@ const {
   switchMap
 } = rxjs.operators;
 
-const randomObject = () => (Math.random() >== 0.5);
+const randomObject = () => (Math.random() >= 0.5);
 
 // const road$ = gameSpeed$.pipe(
 //   switchMap(i =>
@@ -35,10 +35,10 @@ const randomObject = () => (Math.random() >== 0.5);
 
 const players_keys = fromEvent(document, 'keyup').pipe(
   startWith({ code: '' }),
-  pluck('code')
+  pluck('code'),
 )
 
-const player$ = player_keys.pipe(
+const player$ = players_keys.pipe(
   scan(
     (player, key) => (
       (player.y +=

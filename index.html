@@ -1,34 +1,45 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/rxjs/bundles/rxjs.umd.min.js"></script>
+    <script type="module" src="index.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  </head>
+  <body>
 <style>
-    .road {
-      width: 100px;
-      height: 180px;
-      margin-top: 25px;
-      overflow: hidden;
-      position: absolute;
+  .road {
+    width: 350px;
+    height: 500px;
+    margin-top: 25px;
+    margin-right: 25px;
+    overflow: hidden;
+    position: absolute;
+  }
+  .dotted {
+    margin-right: 100px;
+    width: 20000px;
+    height: 20px;
+    /*border-left: 2px dashed lightgray;*/
+    /*border-bottom: 2px dashed lightgray;*/
+    /*border-right: 2px dashed lightgray;*/
+    border-top: 7px dashed lightgray;
+    position: absolute;
+    animation: road-moving 20s infinite linear;
+  }
+
+  @keyframes road-moving {
+    100% {
+      transform: translateX(-1000px);
     }
-  
-    .dotted {
-      margin-top: -100px;
-      height: 300px;
-      border-left: 2px dashed lightgray;
-      position: absolute;
-      animation: road-moving 1s infinite linear;
-    }
-  
-    @keyframes road-moving {
-      100% {
-        transform: translateY(100px);
-      }
-    }
-  </style>
+  }
+</style>
   
   <div class="road">
-    <div class="dotted" style="margin-left: 0px;"></div>
-    <div class="dotted" style="margin-left: 9px;"></div>
-    <div class="dotted" style="margin-left: 18px;"></div>
-    <div class="dotted" style="margin-left: 27px;"></div>
-    <div class="dotted" style="margin-left: 36px;"></div>
-    <div class="dotted" style="margin-left: 45px;"></div>
-    <div class="dotted" style="margin-left: 54px;"></div>
+    <div class="dotted" style="margin-top: 0px;"></div>
+    <div class="dotted" style="margin-top: 47px;"></div>
+
+    <div class="dotted" style="margin-top: 70px;"></div>
+    <div class="dotted" style="margin-top: 117px;"></div>
   </div>
   <div id="game"></div>
+</html>
