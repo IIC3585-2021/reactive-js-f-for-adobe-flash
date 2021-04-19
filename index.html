@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <script src="https://unpkg.com/rxjs/bundles/rxjs.umd.min.js"></script>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="script.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
   </head>
   <body>
@@ -24,7 +24,8 @@
     /*border-right: 2px dashed lightgray;*/
     border-top: 7px dashed lightgray;
     position: absolute;
-    animation: road-moving 20s infinite linear;
+    animation: road-moving 15s infinite linear;
+    animation-play-state: running;
   }
 
   @keyframes road-moving {
@@ -33,13 +34,16 @@
     }
   }
 </style>
+
+  <h3 style="margin-bottom: 0px;">DINOGAME!</h3>
+  <h6 style="margin-top: 0px; margin-bottom: 0px; ">-made by "F FOR ADOBE FLASH"</h6>
   
   <div class="road">
-    <div class="dotted" style="margin-top: 0px;"></div>
-    <div class="dotted" style="margin-top: 47px;"></div>
+    <div class="dotted" id="dot1" style="margin-top: 0px;"></div>
+    <div class="dotted" id="dot2" style="margin-top: 47px;"></div>
 
-    <div class="dotted" style="margin-top: 70px;"></div>
-    <div class="dotted" style="margin-top: 117px;"></div>
+    <div class="dotted" id="dot3" style="margin-top: 70px;"></div>
+    <div class="dotted" id="dot4" style="margin-top: 117px;"></div>
   </div>
   <div id="game"></div>
 </html>
