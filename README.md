@@ -38,6 +38,14 @@ El sitio será cargado en:
 
 http://localhost:8081/
 
+
+
+## Alternativamente:
+
+Ir al sitio: http://cutt.ly/dinogame
+
+
+
 ## Como jugar:
 
 Apretar click para que el dinosaurio azul salte, y apretar cualquier tecla del teclado para que el dinosaurio rojo salte.
