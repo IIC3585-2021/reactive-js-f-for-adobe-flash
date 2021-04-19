@@ -123,9 +123,18 @@ numbers.subscribe(() => {
 
   if (!end_game && marginle1 <= 15 && marginle1 >= 0 && player1.style.marginTop === '52px'){
     p1_dead = true;
+    player1.style['background-image'] = "url('dead_blue.png')";
+    document.getElementById('dot1').style.animationPlayState = 'paused'; 
+    document.getElementById('dot2').style.animationPlayState = 'paused'; 
+
+
   }
   if (!end_game && marginle2 <= 15 && marginle2 >= 0 && player2.style.marginTop === '102px'){
     p2_dead = true;
+    player2.style['background-image'] = "url('dead_red.png')";
+    document.getElementById('dot3').style.animationPlayState = 'paused'; 
+    document.getElementById('dot4').style.animationPlayState = 'paused'; 
+
   }
   if (!end_game){
     if (p1_dead && !p2_dead) {
